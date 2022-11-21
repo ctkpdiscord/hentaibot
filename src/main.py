@@ -1,4 +1,4 @@
-import discord,requests,json
+import discord,requests,json,random
 from discord import commands
 jsondata = json.load(open("./config/config.json","r"))
 
@@ -10,10 +10,14 @@ commandlist = ["hass", "hmidriff", "pgif", "4k", "hentai", "hneko", "neko", "hki
 bot = commands.Bot(command_prefix=prefix,intents=intents)
 
 async def genimage(ctx,type)
+  if proxy:
+    proxies = {"https": random.choice(proxy)}
+  else:
+    proxies = None
   image = requests.get("https://nekobot.xyz/api/image", headers={
                         "User-Agent": "NekoBotAPI-py/1.0",
                         "Authorization": ""
-                        },params={"type": type}).json()["message"]
+                        },params={"type": type},proxies=proxies).json()["message"]
   embed = discord.Embed(title="Hentai Image")
   embed.set_thumbnail(url=image)
   await ctx.send(embed=embed)
