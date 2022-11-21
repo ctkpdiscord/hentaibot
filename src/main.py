@@ -9,7 +9,8 @@ proxy = jsondata["proxysetting"]["proxyset"]
 proxys = jsondata["proxysetting"]["proxys"]
 
 commandlist = ["hass", "hmidriff", "pgif", "4k", "hentai", "hneko", "neko", "hkitsune", "kemonomimi", "anal", "hanal", "gonewild", "kanna", "ass", "pussy", "thigh", "hthigh",  "paizuri", "tentacle", "boobs", "hboobs", "yaoi"]
-
+intents = discord.Intents.default()
+intents.message_content = True
 bot = commands.Bot(command_prefix=prefix,intents=intents)
 
 async def genimage(ctx,type)
