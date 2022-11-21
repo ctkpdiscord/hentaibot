@@ -1,4 +1,8 @@
 {
   "TOKEN": "BOT_TOKEN",
-  "PREFIX": "h!"
+  "PREFIX": "h!",
+  "proxysetting": {
+    "proxys": ["proxy1","proxy2"],
+    "proxyset": true
+  }
 }
