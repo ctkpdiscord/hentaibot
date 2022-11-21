@@ -13,7 +13,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix=prefix,intents=intents)
 
-async def genimage(ctx,type)
+async def genimage(ctx,type):
   if proxy:
     proxies = {"https": random.choice(proxys)}
   else:
