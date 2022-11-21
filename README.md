@@ -1,7 +1,12 @@
 # HentaiBot
 This Is HentaiBot<br>
 Send Nsfw-Image
-# Setting
+# WindowsSetting
 open config/config.json<br>
 Put TOKEN and Prefix and proxysetting<br>
-run `python src/main.py`<br>
+run `run.bat`<br>
+# LinuxSetting
+open config/config.json<br>
+Put TOKEN and Prefix and proxysetting<br>
+run `bash run.sh`<br>
+
