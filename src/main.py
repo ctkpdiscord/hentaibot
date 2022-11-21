@@ -12,6 +12,7 @@ commandlist = ["hass", "hmidriff", "pgif", "4k", "hentai", "hneko", "neko", "hki
 intents = discord.Intents.default()
 #intents.message_content = True
 bot = commands.Bot(command_prefix=prefix,intents=intents)
+bot.remove_command("help")
 
 async def genimage(ctx,type):
   if proxy:
@@ -26,16 +27,22 @@ async def genimage(ctx,type):
   embed.set_image(url=image)
   await ctx.channel.send(embed=embed)
 
-  
+
 @bot.event
 async def on_connect():
   print("起動完了")
 
+@bot.command()
+async def help(ctx):
+  embed = discord.Embed(title="This is HentaiBot",description="\n".join(prefix+i for i in commandlist))
+  await ctx.send(embed=embed)
+
 @bot.listen("on_message")
 async def cmdcommands(message):
   for command in commandlist:
-    if message.content == command:
+    if message.content == prefix+command:
       await genimage(message,command)
       return
+
 
 bot.run(token)
