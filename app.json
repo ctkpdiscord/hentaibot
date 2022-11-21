@@ -1,0 +1,16 @@
+{
+  "name": "HentaiBOT",
+  "description": "HentaiBot",
+  "repository": "https://github.com/ctkpdiscord/nsfwbot",
+  "logo": "https://cdn.discordapp.com/avatars/856773055782846464/015db5dc802e8d72458604a35520e7fa.png?size=1024",
+  "keywords": [
+    "discordbot",
+    "hentaibot"
+  ],
+  "image": "heroku/python",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
