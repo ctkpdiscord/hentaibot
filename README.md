@@ -1,6 +1,6 @@
 # HentaiBot
 This Is HentaiBot<br>
-Send Nsfw-Image
+Send Nsfw(R-18 Hentai)-Image
 # WindowsSetting
 open config/config.json<br>
 Put TOKEN and Prefix and proxysetting<br>
