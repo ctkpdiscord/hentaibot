@@ -1,1 +1,1 @@
-worker: python src/main.py
+worker: pip install -r requirements && python src/main.py
