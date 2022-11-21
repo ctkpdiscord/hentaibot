@@ -5,7 +5,7 @@ jsondata = json.load(open("./config/config.json","r"))
 
 token = jsondata["TOKEN"]
 prefix = jsondata["PREFIX"]
-proxy = jsondata["proxysetting"]
+proxy = jsondata["proxysetting"]["proxyset"]
 proxys = jsondata["proxysetting"]["proxys"]
 
 commandlist = ["hass", "hmidriff", "pgif", "4k", "hentai", "hneko", "neko", "hkitsune", "kemonomimi", "anal", "hanal", "gonewild", "kanna", "ass", "pussy", "thigh", "hthigh",  "paizuri", "tentacle", "boobs", "hboobs", "yaoi"]
