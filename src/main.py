@@ -5,13 +5,16 @@ jsondata = json.load(open("./config/config.json","r"))
 
 token = jsondata["TOKEN"]
 prefix = jsondata["PREFIX"]
+proxy = jsondata["proxysetting"]
+proxys = jsondata["proxysetting"]["proxys"]
+
 commandlist = ["hass", "hmidriff", "pgif", "4k", "hentai", "hneko", "neko", "hkitsune", "kemonomimi", "anal", "hanal", "gonewild", "kanna", "ass", "pussy", "thigh", "hthigh",  "paizuri", "tentacle", "boobs", "hboobs", "yaoi"]
 
 bot = commands.Bot(command_prefix=prefix,intents=intents)
 
 async def genimage(ctx,type)
   if proxy:
-    proxies = {"https": random.choice(proxy)}
+    proxies = {"https": random.choice(proxys)}
   else:
     proxies = None
   image = requests.get("https://nekobot.xyz/api/image", headers={
